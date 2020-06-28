@@ -2,7 +2,7 @@
 #include "sample.h"
 #include "list.h"
 int main(void) {
-	tList list = Inicialize(), list2 = Inicialize();
+	tList list = Inicialize();
 	tData x = input(3), y = input(4), z = input(5), w = input(6);
 	
 	append(list, x);
@@ -12,7 +12,7 @@ int main(void) {
 	
 	printf("List:\n");
 	printList(list);
-
+	
 	clear(list);
 	return 0;
 }

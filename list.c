@@ -98,6 +98,7 @@ void* erase(tList list, void* info){
 		ant->prox->ant = ant;
 	}
 	aux = copyData(p->info);
+	freeData(p->info);
 	free(p);
 
 	return aux;
@@ -131,6 +132,7 @@ void* pop(tList list, int pos){
 		ant->prox->ant = ant;
 	}
 	aux = copyData(p->info);
+	freeData(p->info);
 	free(p);
 
 	return aux;
@@ -168,6 +170,7 @@ void clear(tList list){
 		free(p);
 	}
 	list->lenght = 0;
+	free(list);
 }
 void printList(tList list){
 	for(tNode p = list->fst; p!= NULL; p = p->prox){
